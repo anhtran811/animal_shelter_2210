@@ -50,7 +50,7 @@ RSpec.describe Shelter do
   end 
 
   describe '#call_pets' do
-      xit 'returns a list of names with exclamation points appended' do
+      it 'returns a list of names with exclamation points appended' do
         
 
         shelter = Shelter.new('Denver Animal Shelter', 5)

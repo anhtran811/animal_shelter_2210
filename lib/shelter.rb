@@ -1,7 +1,7 @@
 class Shelter
   attr_reader :name, :capacity, :pets
 
-  def initialize(name, capacity = false)
+  def initialize(name, capacity)
     @name = name
     @capacity = capacity
     @pets = []
@@ -11,15 +11,13 @@ class Shelter
     @pets << pet
   end
 
-  # def call_pets(call)
-  # end
+  def call_pets
+    @pets << @pet + "!"
+  end
 
   def over_capacity?
-    if @pets.length <= 3
-      false
-    else
-      true
-    end
+   return false if @pets.length <= 3
+    true
   end
   
 end
